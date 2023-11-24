@@ -1,6 +1,7 @@
 //Javascrpt Hotel Guest Information
 //Written by Charity Smith  
 //Written on 18-24 Nov 2023
+// git@github.com:csmith709/JavaScript.git
 
 //enter constants
 const guest = {
