@@ -46,23 +46,16 @@ var custStay = {
   }
 };
 
-//Calculate stay length
-// Get the timestamps in milliseconds
-var checkInTimestamp = custStay.dates.custCheckIn[0].getTime();
-var checkOutTimestamp = custStay.dates.custCheckOut[0].getTime();
+//Calculate stay length - inputs
+const checkInTimestamp = custStay.dates.custCheckIn[0].getTime();
+const checkOutTimestamp = custStay.dates.custCheckOut[0].getTime();
 
-// Calculate the difference in milliseconds
-var differenceInDays = checkOutTimestamp - checkInTimestamp;
+// Difference in Days
+const differenceInDays = Math.floor((checkOutTimestamp - checkInTimestamp) / (1000 * 60 * 60 * 24));
 
-// Convert the difference back to a Date object
-var differenceInMilliseconds = checkOutTimestamp - checkInTimestamp;
-
-// Calculate the difference in days
-var differenceInDays = differenceInMilliseconds / (1000 * 60 * 60 * 24);
-
-// Format the date as YYYY-MM-DD
-var formattedCheckInDate = custStay.dates.custCheckIn[0].toLocaleDateString('en-CA');  // en-CA gives YYYY-MM-DD
-var formattedCheckOutDate = custStay.dates.custCheckOut[0].toLocaleDateString('en-CA');
+// Format the dates as YYYY-MM-DD
+const formattedCheckInDate = custStay.dates.custCheckIn[0].toLocaleDateString('en-CA');
+const formattedCheckOutDate = custStay.dates.custCheckOut[0].toLocaleDateString('en-CA');
 
 console.log(formattedCheckInDate); // Output: 2023-11-12
 console.log(formattedCheckOutDate); // Output: 2023-11-18
