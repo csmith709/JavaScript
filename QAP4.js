@@ -62,7 +62,7 @@ console.log(formattedCheckOutDate); // Output: 2023-11-18
 
 // Write customer desciption
 let val;
-val = `My name is ${guest.custFName} ${guest.custLName}. I am ${guest.custGender.toLowerCase()} and I am ${age} years old. I prefer the hotel rooms that have a view of the sunrise and the ocean, including rooms: ${guest.custRoomPref}. My address is ${guest.custAddress.custStAdd}, ${guest.custAddress.custCity}, ${guest.custAddress.custProv}, ${guest.custAddress.custPost}. My phone number is ${guest.custPhone}. I am going on vacation from ${formattedCheckInDate} to ${formattedCheckOutDate}, which is in ${differenceInDays} days.`;
+val = `My name is ${guest.custFName} ${guest.custLName}. I am ${guest.custGender.toLowerCase()} and I am ${age} years old. I prefer the hotel rooms that have a view of the sunrise and the ocean, including rooms: ${guest.custRoomPref}. My address is ${guest.custAddress.custStAdd}, ${guest.custAddress.custCity}, ${guest.custAddress.custProv}, ${guest.custAddress.custPost}. My phone number is ${guest.custPhone}. I am going on vacation from ${formattedCheckInDate} to ${formattedCheckOutDate}, which is a total of ${differenceInDays} days.`;
 
 html = `<p>${val}<p>`;
 document.body.innerHTML = html;
